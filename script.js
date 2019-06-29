@@ -9,6 +9,7 @@ let banner = document.getElementById('banner');
 
 showCalendar(currentMonth, currentYear);
 
+
 function showCalendar(month, year){
 	let firstDay = (new Date(year, month)).getDay();
 	let daysInMonth = 32 - new Date(year, month, 32).getDate();
@@ -19,8 +20,6 @@ function showCalendar(month, year){
 	calendar.innerHTML = '';
 
 	banner.innerHTML = months[month] + ' ' + year;
-
-	// select
 
 	let date = 1;
 	for(let i = 0; i < 6; i++){
@@ -41,7 +40,7 @@ function showCalendar(month, year){
 			else{
 				let cell = document.createElement('p');
 				let cellText = document.createTextNode(date);
-				if(date === today.getDate() && year === today.getFullYear() && month === today.getMonth){
+				if(date === today.getDate() && year === today.getFullYear() && month === today.getMonth()){
 					// add calass
 				}
 
@@ -66,7 +65,6 @@ function prev(){
 	currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
 	currentMonth = (currentMonth === 0) ?  11 : currentMonth - 1;
 	showCalendar(currentMonth, currentYear);
-	console.log(currentMonth);
 }
 
 function jump(){
@@ -74,7 +72,6 @@ function jump(){
 	currentYear = parseInt(document.getElementById("year").value);
 	showCalendar(currentMonth, currentYear);
 }
-
 
 function current(){
 	currentMonth = today.getMonth();

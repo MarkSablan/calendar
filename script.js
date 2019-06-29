@@ -63,15 +63,15 @@ function next(){
 }
 
 function prev(){
-	currentYear = (currentMonth == 0) ? currentYear - 1 : currentYear;
-	currentMonth = (currentMonth == 0) ?  11 : currentMonth - 1;
+	currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+	currentMonth = (currentMonth === 0) ?  11 : currentMonth - 1;
 	showCalendar(currentMonth, currentYear);
 	console.log(currentMonth);
 }
 
 function jump(){
-	currentMonth = document.getElementById("month").value;
-	currentYear = document.getElementById("year").value;
+	currentMonth = parseInt(document.getElementById("month").value);
+	currentYear = parseInt(document.getElementById("year").value);
 	showCalendar(currentMonth, currentYear);
 }
 

@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	display: flex;
+}
+
+.calendar{
+	position: absolute;
+	width: 320px;
+	left: 50%;
+	top: 20%;
+	transform: translate(-50%, -20%);
+	background-color: #704e2e;
+	color: #fff;
+}
+
+.calendar .cal-banner{
+	/*width: 100%;*/
+	padding: 20px;
+	background-color: #76b041;
+	font-size: 30px;
+}
+
+.calendar .cal-header{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar .cal-body div{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar .cal-header *,
+.calendar .cal-body div *{
+	cursor: pointer;
+	user-select: none;
+	text-align: center;
+	line-height: 40px;
+	justify-self: center;
+	width: 100%;
+	height: 100%;
+	/*background-color: #eaeaea;*/
+	border-radius: 0%;
+}
+
+.calendar .options{
+	padding: 10px;
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.calendar .options .button{
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	border-radius: 10px;
+	line-height: 50px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+.calendar .options .button:nth-child(2){
+	grid-column: 4/5;
+}

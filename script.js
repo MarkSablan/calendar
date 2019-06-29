@@ -63,9 +63,10 @@ function next(){
 }
 
 function prev(){
-	currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-	currentMonth = (currentMonth === 0) ?  11 : currentMonth - 1;
+	currentYear = (currentMonth == 0) ? currentYear - 1 : currentYear;
+	currentMonth = (currentMonth == 0) ?  11 : currentMonth - 1;
 	showCalendar(currentMonth, currentYear);
+	console.log(currentMonth);
 }
 
 function jump(){
@@ -76,7 +77,9 @@ function jump(){
 
 
 function current(){
-	showCalendar(today.getMonth(), today.getFullYear());
+	currentMonth = today.getMonth();
+	currentYear = today.getFullYear();
+	showCalendar(currentMonth, currentYear);
 }
 
 
